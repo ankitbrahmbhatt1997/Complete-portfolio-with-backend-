@@ -5,6 +5,8 @@ const path = require("path");
 const nodemailer = require("nodemailer");
 const keys = require("./config/keys");
 
+let port = process.env.PORT || 3000;
+
 const app = express();
 
 // View engine setup
@@ -73,4 +75,4 @@ app.post("/send", (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log("Server started..."));
+app.listen(port, () => console.log(`Server started at ${port}`));
