@@ -7,6 +7,16 @@ home.forEach(element => {
     check.checked = false;
   });
 });
+let loadButton = document.querySelector(".load-button");
+loadButton.addEventListener("click", function(e) {
+  let portfolio = document.querySelector(".portfolio");
+
+  portfolio.style.height = `${portfolio.scrollHeight}px`;
+
+  loadButton.style.display = "none";
+  portfolio.classList.remove("special-after");
+});
+
 // var i = 1;
 
 // function changeBackground() {
