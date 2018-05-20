@@ -39,3 +39,19 @@ loadButton.addEventListener("click", function(e) {
 // }
 
 // setInterval(changeBackground, 10000);
+
+let content = document.querySelector(".anim--heading h3");
+let animHead = document.querySelector(".anim--heading");
+let i = 1;
+function change() {
+  let a = ["HTML5", "CSS3", "Javascript", "Node.js", "MongoDb"];
+  let width = ["13.5rem", "9.5rem", "19rem", "14rem", "16.3rem"];
+  content.innerHTML = a[i];
+  animHead.style.width = width[i];
+  i++;
+  if (i >= 5) {
+    i = 0;
+  }
+}
+
+setInterval(change, 4000);
